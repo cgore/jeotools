@@ -1,6 +1,6 @@
 (defproject jeotools "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "JeoTools = GeoTools + Clojure"
+  :url "https://github.com/cgore/jeotools"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :repositories {"osgeo" "http://download.osgeo.org/webdav/geotools"}
