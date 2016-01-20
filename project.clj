@@ -3,6 +3,7 @@
   :url "https://github.com/cgore/jeotools"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :profiles {:dev {:resource-paths ["test/resources"]}}
   :repositories {"osgeo" "http://download.osgeo.org/webdav/geotools"}
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.geotools/gt-main      "14.1"]
