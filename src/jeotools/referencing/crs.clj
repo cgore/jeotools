@@ -2,7 +2,7 @@
 
 ;;; org.geotools.referencing
 ;;; class CRS
-;;; Javasocs: <http://docs.geotools.org/latest/javadocs/org/geotools/referencing/CRS.html>
+;;; Javadocs: <http://docs.geotools.org/latest/javadocs/org/geotools/referencing/CRS.html>
 
 (defn get-authority-factory
   "Returns the CRS authority factory used by the decode methods."
