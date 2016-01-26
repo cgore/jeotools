@@ -78,4 +78,6 @@
 (defn transparency [c]
   (.getTransparency c))
 
-
+(defn hex-string [c]
+  (str "#" (apply str (map #(format "%02x" %)
+                           [(red c) (green c) (blue c)]))))
