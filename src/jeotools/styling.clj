@@ -16,3 +16,6 @@
     (.setColor (literal-expression color))
     (.setQuantity (literal-expression quantity))
     (.setOpacity (literal-expression opacity))))
+
+(defn style-builder []
+  (org.geotools.styling.StyleBuilder.))
