@@ -6,3 +6,6 @@
         sld-parser (org.geotools.styling.SLDParser. style-factory sld-url)
         style-from-file (first (vec (.readXML sld-parser)))]
     style-from-file))
+
+(defn create-polygon-style [outline-color fill-color opacity]
+  (org.geotools.styling.SLD/createPolygonStyle outline-color fill-color opacity))
