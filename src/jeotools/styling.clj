@@ -19,3 +19,9 @@
 
 (defn style-builder []
   (org.geotools.styling.StyleBuilder.))
+
+(defn color-map [style-builder v]
+  (let [entries (map color-map-entry v)
+        result (org.geotools.styling.ColorMapImpl.)]
+    (doall (map #(.addColorMapEntry result %) entries))
+    result))
