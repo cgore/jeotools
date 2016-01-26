@@ -60,4 +60,22 @@
    (and (color= c d)
         (every? #(color= c %) rest))))
 
+(defn alpha [c]
+  (.getAlpha c))
+
+(defn red [c]
+  (.getRed c))
+
+(defn green [c]
+  (.getGreen c))
+
+(defn blue [c]
+  (.getBlue c))
+
+(defn rgb [c]
+  (.getRGB c))
+
+(defn transparency [c]
+  (.getTransparency c))
+
 
