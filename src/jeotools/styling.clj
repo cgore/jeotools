@@ -25,3 +25,15 @@
         result (org.geotools.styling.ColorMapImpl.)]
     (doall (map #(.addColorMapEntry result %) entries))
     result))
+
+(defn color-map-style [v]
+  (let [raster-symbolizer (fn [style-builder v]
+                            (doto (org.geotools.styling.RasterSymbolizerImpl. (.getFilterFactory style-builder))
+                              (.setColorMap (color-map style-builder v))))
+        rule (fn [style-builder v]
+               (.createRule style-builder (raster-symbolizer style-builder v)))
+        feature-type-style (fn [style-builder v]
+                             (.createFeatureTypeStyle style-builder nil (rule style-builder v)))
+        style-builder (org.geotools.styling.StyleBuilder.)]
+    (doto (.createStyle style-builder)
+      (.addFeatureTypeStyle (feature-type-style style-builder v)))))
