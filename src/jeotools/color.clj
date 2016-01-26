@@ -47,3 +47,17 @@
          :else
          (Color. r g b a))))
 
+(defn brighter [c]
+  (.brighter c))
+
+(defn darker [c]
+  (.darker c))
+
+(defn color=
+  ([c] true)
+  ([c d] (.equals c d))
+  ([c d & rest]
+   (and (color= c d)
+        (every? #(color= c %) rest))))
+
+
